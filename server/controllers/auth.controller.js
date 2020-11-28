@@ -3,7 +3,7 @@ const { createUser } = require("../services/user.service")
 
 const signup = async (req, res, next) => {
   try {
-    await createUser(req, body)
+    await createUser(req.body)
 
     res.sendStatus(201)
   } catch (error) {

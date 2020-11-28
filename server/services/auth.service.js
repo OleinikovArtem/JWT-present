@@ -23,13 +23,16 @@ const loginService = async ({ login, password }) => {
 
   const tokens = getTokens(user)
 
+  user.login = undefined
+  user.password = undefined
+
   return { tokens, user }
 }
 
 const getTokens = ({ _id }) => {
   const payload = { id: _id }
-
-  const accessToken = jwt.sign(payload, ACCESS_TOKEN_KEY, { expiresIn: "1h" })
+  // h days 
+  const accessToken = jwt.sign(payload, ACCESS_TOKEN_KEY, { expiresIn: "20s" })
   const refreshToken = jwt.sign(payload, REFRESH_TOKEN_KEY, { expiresIn: "30days" })
 
   return { accessToken, refreshToken }

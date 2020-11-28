@@ -1,7 +1,7 @@
 const { Unauthorized } = require("http-errors");
 const { verifyTokenService } = require("../services/auth.service");
 
-const tokenMiddleware = async (req, res, next) => {
+const authMiddleware = async (req, res, next) => {
   try {
     const { headers: { authorization } } = req
 
@@ -26,5 +26,5 @@ const tokenMiddleware = async (req, res, next) => {
 }
 
 module.exports = {
-  tokenMiddleware,
+  authMiddleware,
 }

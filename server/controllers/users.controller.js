@@ -1,4 +1,4 @@
-const { getUsersService } = require("../services/user.service")
+const { getUsersService, findUser } = require("../services/user.service")
 
 const getUsers = async (req, res, next) => {
   try {
@@ -9,6 +9,16 @@ const getUsers = async (req, res, next) => {
   }
 }
 
+const getClient = async (req, res, next) => {
+  try {
+    const user = await findUser({ _id: req.user.id })
+    res.json(user)
+  } catch (error) {
+    next(error)
+  }
+}
+
 module.exports = {
-  getUsers
+  getUsers,
+  getClient
 }
