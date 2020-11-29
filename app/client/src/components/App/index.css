@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+.MuiTableCell-root,
+.MuiTableCell-body {
+  min-width: 100px;
+}
+
+.MuiTableCell-root,
+.MuiTableCell-body {
+  max-width: 100%;
+  min-width: 50%;
+}

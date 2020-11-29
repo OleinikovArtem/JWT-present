@@ -1,0 +1,13 @@
+.auth-form {
+  max-width: 90%;
+  width: 600px;
+  margin: 50px auto;
+}
+.auth-form__btn-container {
+  display: flex;
+  padding: 10px 0;
+  gap: 20px;
+}
+.mb-10 {
+  margin-bottom: 10px !important;
+}

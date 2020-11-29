@@ -1,0 +1,18 @@
+.ml-auto {
+  margin-left: auto;
+}
+
+.toolbar {
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 20px;
+}
